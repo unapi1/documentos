@@ -102,8 +102,29 @@ background: #1b1473;
       .catch(err => console.log(err))
     }
 
+    setTimeout(function(){ alert("El documento ya no está disponible para tu usuario"); }, 12000);
+
+
   </script>
   
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+      setTimeout(function() {
+          $(".content").fadeOut(1500);
+      },3000);
+   
+      setTimeout(function() {
+          $(".content2").fadeIn(1500);
+      },6000);
+  });
+  </script>
+
+
+
+
+
+
   <div class="lds-ring">
       <div>
 
@@ -119,8 +140,17 @@ background: #1b1473;
       </div>
   </div>
   
+  <div class="content">
+    <p style="color: rgb(97, 165, 42);">Validando vigencia del documento</p>
+</div>
+<div class="content2" style="display:none;">
+    <p style="color: brown;">El documento al que deseas acceder ha caducado</p>
+</div>
+
+
+
 <div><h1>Validando vigencia del documento</h1></div>
-<p style="color: brown;">El documento al que deseas acceder ha caducado</p>
+
 <div><div></div></div>
 <div>
 <p>
@@ -136,4 +166,8 @@ background: #1b1473;
 </a>
 
 </div>
+
+
+
+
 </body>
